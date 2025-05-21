@@ -7,23 +7,25 @@ public class FizzBuzz {
         int number = scanner.nextInt();
         doTheFizzBuzz.execute(number);
     }
-}
 
-class doTheFizzBuzz {
-    public static void execute(int number) {
-        for (int i = 1; i <= number; i++) {
-            StringBuilder result = new StringBuilder();
-            if (i % 3 == 0) {
-                result.append("Fizz");
+    static class doTheFizzBuzz {
+        static void execute(int number) {
+            for (int i = 1; i <= number; i++) {
+                StringBuilder result = new StringBuilder();
+                if (i % 3 == 0) {
+                    result.append("Fizz");
+                }
+                if (i % 5 == 0) {
+                    result.append("Buzz");
+                }
+                if (result.toString().isEmpty()) {
+                    result.append(i);
+                }
+                System.out.print(i + " ");
+                System.out.println(result);
             }
-            if (i % 5 == 0) {
-                result.append("Buzz");
-            }
-            if (result.toString().isEmpty()) {
-                result.append(i);
-            }
-            System.out.print(i + " ");
-            System.out.println(result);
         }
     }
 }
+
+
