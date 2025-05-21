@@ -5,7 +5,7 @@ public class FizzBuzz {
         Scanner scanner = new Scanner(System.in);
         System.out.println("number");
         int number = scanner.nextInt();
-        for (int i = 1; i < number; i++) {
+        for (int i = 1; i <= number; i++) {
             StringBuilder result = new StringBuilder();
             if (i % 3 == 0) {
                 result.append("Fizz");
