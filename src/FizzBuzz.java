@@ -5,6 +5,12 @@ public class FizzBuzz {
         Scanner scanner = new Scanner(System.in);
         System.out.println("number");
         int number = scanner.nextInt();
+        doTheFizzBuzz.execute(number);
+    }
+}
+
+class doTheFizzBuzz {
+    public static void execute(int number) {
         for (int i = 1; i <= number; i++) {
             StringBuilder result = new StringBuilder();
             if (i % 3 == 0) {
