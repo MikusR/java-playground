@@ -40,10 +40,10 @@ public class ArraysTest {
 
     private static Map<String, Object> getStringObjectMap() {
         Map<String, Object> variables = new HashMap<>();
-        int[] integers = {1, 4, 6, 99, 2, 1, 2};
-        String[] strings = {"aa", "aaa", "zzzzzz", "a"};
-        ArrayList<Integer> alintegers = new ArrayList<>(Arrays.asList(1, 4, 6, 99, 2, 1, 2));
-        ArrayList<String> alstrings = new ArrayList<>(Arrays.asList("aa", "aaa", "zzzzzz", "a"));
+        int[] integers = { 1, 4, 6, 99, 2, 1, 2 };
+        String[] strings = { "aa", "aaa", "zzzzzz", "a" };
+        List<Integer> alintegers = new ArrayList<>(Arrays.asList(1, 4, 6, 99, 2, 1, 2));
+        List<String> alstrings = new ArrayList<>(Arrays.asList("aa", "aaa", "zzzzzz", "a"));
         variables.put("Integers", integers);
         variables.put("Strings", strings);
         variables.put("Array list of Integers", alintegers);
