@@ -1,11 +1,10 @@
-import java.io.IOException;
 import java.net.URL;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 
 public class firstJson {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         try {
             URL url = new URL("https://catfact.ninja/fact");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
