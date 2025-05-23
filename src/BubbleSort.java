@@ -27,7 +27,7 @@ class Sorter {
                 System.out.println("i= " + i + " " + Arrays.toString(arrayToSort));
             }
 
-            for (int j = 0; j < length - 1; j++) {
+            for (int j = 0; j < length - 1 - i; j++) {
                 if (debug) {
                     steps++;
                 }
