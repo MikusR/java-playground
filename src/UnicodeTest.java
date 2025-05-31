@@ -1,9 +1,10 @@
 public class UnicodeTest {
+
     public static void main(String[] arguments) {
         System.out.println("Mikus1");
         char letter = '\u0000';
         int counter = 0;
-        while (true) {
+        while (letter < '\uFFFF') {
             // turns out Konsole can't print control characters, but VS Code terminal can
             if (Character.isISOControl(letter)) {
                 letter++;
@@ -25,6 +26,7 @@ public class UnicodeTest {
             if (counter > 80) {
                 System.out.println();
                 counter = 0;
+                System.out.print(letter / 80 + ": ");
             }
             letter++;
         }
