@@ -6,6 +6,7 @@ public class FizzBuzz {
         System.out.println("number");
         int number = scanner.nextInt();
         doTheFizzBuzz.execute(number);
+        scanner.close();
     }
 
     static class doTheFizzBuzz {
