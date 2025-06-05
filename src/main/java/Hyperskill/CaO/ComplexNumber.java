@@ -1,4 +1,4 @@
-package Hyperskill.CaO;
+package main.java.Hyperskill.CaO;
 
 class Complex {
 

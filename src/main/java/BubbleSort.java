@@ -1,6 +1,7 @@
+package main.java;
 import java.util.Arrays;
 
-import utils.Speak;
+import main.java.utils.Speak;
 
 public class BubbleSort {
     public static void main(String[] args) {

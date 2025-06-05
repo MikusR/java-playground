@@ -1,4 +1,4 @@
-package store;
+package main.java.store;
 
 public class Book extends Item {
     String color;

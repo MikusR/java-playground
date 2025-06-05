@@ -1,3 +1,4 @@
+package main.java;
 public class UnicodeTest {
 
     public static void main(String[] arguments) {

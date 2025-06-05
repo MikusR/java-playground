@@ -1,3 +1,4 @@
+package main.java;
 public class PatientDemo {
 
     public static void main(String[] args) {
