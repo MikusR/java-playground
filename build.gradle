@@ -4,3 +4,33 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.14.2/samples
  */
+
+
+plugins {
+    id 'java'
+    id 'application'
+}
+description = "Playing with gradle"
+repositories
+
+ {
+    mavenCentral()
+}
+dependencies
+ {
+// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.0'
+  
+}
+
+task helloGradle {
+    doLast {
+        println 'Hello, aliens'
+    }
+}
+
+
+
+application {
+    mainClass = 'main.java.SecondJson'
+}
