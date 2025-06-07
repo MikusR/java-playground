@@ -23,14 +23,11 @@ implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.0'
   
 }
 
-task helloGradle {
-    doLast {
-        println 'Hello, aliens'
-    }
+run {
+    standardInput = System.in
 }
 
 
-
 application {
-    mainClass = 'main.java.SecondJson'
+    mainClass = 'main.java.Lambda'
 }
