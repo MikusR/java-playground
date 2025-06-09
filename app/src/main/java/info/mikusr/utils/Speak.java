@@ -1,4 +1,4 @@
-package main.java.utils;
+package info.mikusr.utils;
 
 public class Speak {
     public static void bark() {

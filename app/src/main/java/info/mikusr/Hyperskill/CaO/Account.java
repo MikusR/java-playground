@@ -1,4 +1,4 @@
-package main.java.Hyperskill.CaO;
+package info.mikusr.Hyperskill.CaO;
 
 public class Account {
     long balance;

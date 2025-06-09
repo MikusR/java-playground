@@ -1,4 +1,5 @@
-package main.java;
+package info.mikusr;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

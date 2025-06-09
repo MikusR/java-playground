@@ -1,19 +1,19 @@
-package main.java;
+package info.mikusr;
+
 import java.util.Arrays;
 
-import main.java.utils.Speak;
+import info.mikusr.utils.Speak;
 
 public class BubbleSort {
     public static void main(String[] args) {
         Speak.sayHello();
-        int[] numbers = {5, 1, 4, 2, 3, 0, 1};
+        int[] numbers = { 5, 1, 4, 2, 3, 0, 1 };
         int[] sortedNumbers = Sorter.sort(numbers, true);
         System.out.println("unsorted");
         System.out.println(Arrays.toString(numbers));
         System.out.println("sorted");
         System.out.println(Arrays.toString(sortedNumbers));
     }
-
 
 }
 

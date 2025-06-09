@@ -29,5 +29,5 @@ run {
 
 
 application {
-    mainClass = 'main.java.Lambda'
+    mainClass = 'info.mikusr.Lambda'
 }

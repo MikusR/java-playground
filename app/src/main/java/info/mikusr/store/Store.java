@@ -1,4 +1,5 @@
-package main.java.store;
+package info.mikusr.store;
+
 
 public class Store {
     public static void main(String[] args) {

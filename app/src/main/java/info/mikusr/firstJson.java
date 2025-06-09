@@ -1,4 +1,5 @@
-package main.java;
+package info.mikusr;
+
 import java.net.URL;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -24,18 +25,14 @@ public class firstJson {
                 }
                 in.close();
 
-
                 System.out.println(response);
             } else {
                 System.out.println("GET request did not work.");
             }
 
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
-
     }
 }
-

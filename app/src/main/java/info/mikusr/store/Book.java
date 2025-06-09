@@ -1,4 +1,4 @@
-package main.java.store;
+package info.mikusr.store;
 
 public class Book extends Item {
     String color;

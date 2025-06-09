@@ -1,4 +1,5 @@
-package main.java;
+package info.mikusr;
+
 import java.util.Scanner;
 
 public class FizzBuzz {
@@ -29,5 +30,3 @@ public class FizzBuzz {
         }
     }
 }
-
-

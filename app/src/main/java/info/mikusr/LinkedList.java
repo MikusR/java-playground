@@ -1,4 +1,5 @@
-package main.java;
+package info.mikusr;
+
 class ListNode {
     ListNode next;
     // Etc.

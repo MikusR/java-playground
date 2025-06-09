@@ -1,4 +1,5 @@
-package main.java;
+package info.mikusr;
+
 public class PatientDemo {
 
     public static void main(String[] args) {
