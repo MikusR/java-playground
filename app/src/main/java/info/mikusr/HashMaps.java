@@ -12,7 +12,7 @@ public class HashMaps {
         map2.put("4", "four");
         sMap2.put("four", "4");
         System.out.println(map1);
-        System.out.println(map1.get("2"));
+        System.out.println(map1.get("77"));
         System.out.println(map2);
         System.out.println(sMap2);
         System.out.println(map2.getOrDefault("3", "default"));
