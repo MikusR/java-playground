@@ -9,7 +9,7 @@ public class Arrays2 {
         alistOne.add("ev2");
         alistOne.add("ev3");
         System.out.println(alistOne);
-        System.out.println(alistOne.getLast());
+        System.out.println(alistOne.get(alistOne.size() - 1));// getlast was added in java 21
         alistOne.remove("ev2");
         System.out.println(alistOne);
     }
