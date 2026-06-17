@@ -7,7 +7,7 @@ public class files {
     public static void main(String[] arg) {
         File directory = new File("testfiles");
         File file = new File("testfiles/file.file");
-        Boolean dirCreated = directory.mkdir();
+        boolean dirCreated = directory.mkdir();
         if (dirCreated) {
             System.out.println("directory was successfully created.");
         } else {
