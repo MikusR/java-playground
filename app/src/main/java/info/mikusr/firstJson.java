@@ -4,11 +4,12 @@ import java.net.URL;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
 
 public class firstJson {
     public static void main(String[] args) {
         try {
-            URL url = new URL("https://catfact.ninja/fact");
+            URL url = new URI("https://catfact.ninja/fact").toURL();
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
