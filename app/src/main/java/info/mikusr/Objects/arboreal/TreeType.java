@@ -1,4 +1,4 @@
-package info.mikusr.Objects;
+package info.mikusr.Objects.arboreal;
 
 public enum TreeType {
     OAK,

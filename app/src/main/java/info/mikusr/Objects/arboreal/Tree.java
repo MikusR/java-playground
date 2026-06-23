@@ -1,4 +1,4 @@
-package info.mikusr.Objects;
+package info.mikusr.Objects.arboreal;
 
 import java.awt.*;
 
@@ -20,6 +20,7 @@ public class Tree {
     }
 
     void announceTallTree() {
-        if (this.heightFt > 100) System.out.println("Tall");
+        if (this.heightFt > 100)
+            System.out.println("Tall");
     }
 }
