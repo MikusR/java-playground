@@ -5,7 +5,11 @@ public class Employee extends Person {
     private String employeeId;
     private String title;
 
-    Employee(String name, int age, String sex) {
+    public Employee() {
+        super();
+    }
+
+    public Employee(String name, int age, String sex) {
         super(name, age, sex);
     }
 
