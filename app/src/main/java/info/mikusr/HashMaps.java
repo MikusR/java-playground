@@ -16,5 +16,7 @@ public class HashMaps {
         System.out.println(map2);
         System.out.println(sMap2);
         System.out.println(map2.getOrDefault("3", "default"));
+
+        map2.forEach((k, v) -> System.out.println("k: " + k + " v: " + v));
     }
 }
