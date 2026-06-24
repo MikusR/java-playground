@@ -20,14 +20,12 @@ public class Dd {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         Class<?> clazz = obj.getClass();
 
-        // 1. Handle Arrays
+        // 1. Handle Arrays (Same as before)
         if (clazz.isArray()) {
             Map<String, Object> arrayMap = new LinkedHashMap<>();
             arrayMap.put("__class__", clazz.getComponentType().getSimpleName() + "[]");
-
             int length = Array.getLength(obj);
             List<Map<String, Object>> elements = new ArrayList<>();
-
             for (int i = 0; i < length; i++) {
                 Object value = Array.get(obj, i);
                 Map<String, Object> elementInfo = new LinkedHashMap<>();
@@ -41,15 +39,13 @@ public class Dd {
             return;
         }
 
-        // 2. Handle Collections (Lists, Sets, etc.)
+        // 2. Handle Collections (Same as before)
         if (obj instanceof Collection<?>) {
             Map<String, Object> collectionMap = new LinkedHashMap<>();
             collectionMap.put("__class__", clazz.getName());
-
             Collection<?> col = (Collection<?>) obj;
             List<Map<String, Object>> elements = new ArrayList<>();
             int i = 0;
-
             for (Object value : col) {
                 Map<String, Object> elementInfo = new LinkedHashMap<>();
                 elementInfo.put("index", i++);
@@ -62,25 +58,43 @@ public class Dd {
             return;
         }
 
-        // 3. Handle Standard Objects (Your existing logic)
+        // 3. Handle Standard Objects (Upgraded for Inheritance)
         Map<String, Object> debugMap = new LinkedHashMap<>();
         debugMap.put("__class__", clazz.getName());
 
-        for (Field field : clazz.getDeclaredFields()) {
-            field.setAccessible(true);
-            try {
-                String fieldName = field.getName();
-                String fieldType = field.getType().getSimpleName();
-                Object fieldValue = field.get(obj);
+        // Loop through the class and all its superclasses
+        Class<?> currentClass = clazz;
+        while (currentClass != null && currentClass != Object.class) {
 
-                Map<String, Object> typeAndValue = new LinkedHashMap<>();
-                typeAndValue.put("type", fieldType);
-                typeAndValue.put("value", fieldValue);
+            // Optional: If you want to see which class a field came from,
+            // you could append a prefix, but we'll stick to a flat map of fields here.
+            for (Field field : currentClass.getDeclaredFields()) {
 
-                debugMap.put(fieldName, typeAndValue);
-            } catch (IllegalAccessException e) {
-                debugMap.put(field.getName(), "Error accessing field: " + e.getMessage());
+                // Avoid duplicating fields if a child shadows a parent field name
+                if (debugMap.containsKey(field.getName())) {
+                    continue;
+                }
+
+                field.setAccessible(true);
+                try {
+                    String fieldName = field.getName();
+                    String fieldType = field.getType().getSimpleName();
+                    Object fieldValue = field.get(obj);
+
+                    Map<String, Object> typeAndValue = new LinkedHashMap<>();
+                    typeAndValue.put("type", fieldType);
+                    typeAndValue.put("value", fieldValue);
+
+                    // Optional: Track which class level the field belongs to
+                    typeAndValue.put("definedIn", currentClass.getSimpleName());
+
+                    debugMap.put(fieldName, typeAndValue);
+                } catch (IllegalAccessException e) {
+                    debugMap.put(field.getName(), "Error accessing field: " + e.getMessage());
+                }
             }
+            // Move up to the parent class
+            currentClass = currentClass.getSuperclass();
         }
 
         System.out.println(gson.toJson(debugMap));
