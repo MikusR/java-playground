@@ -41,4 +41,10 @@ public class Book implements Product {
         this.name = name;
     }
 
+    @Override
+    public void setPrice(double price) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setPrice'");
+    }
+
 }
