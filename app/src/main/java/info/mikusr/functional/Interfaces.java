@@ -2,7 +2,7 @@ package info.mikusr.functional;
 
 import java.util.function.Consumer;
 
-public class Interaces {
+public class Interfaces {
     public static void main(String[] args) {
 
         // lambda
